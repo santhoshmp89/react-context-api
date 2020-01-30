@@ -3,6 +3,7 @@ import "./styles.css";
 import Page from "./Page";
 import Button from "./Button";
 import ThemeContext from "./themeContext";
+import Title from "./Title";
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
@@ -27,6 +28,7 @@ export default function App() {
           <h1>React ContextAPI Learning</h1>
           {contextValue.theme}
           <Button title="Change Theme" />
+          <Title title="Heading" />
         </Page>
       </div>
     </ThemeContext.Provider>
