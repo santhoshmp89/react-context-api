@@ -15,13 +15,18 @@ export default function App() {
     }
   };
 
+  const contextValue = {
+    theme: theme,
+    themeChange: handleSetTheme
+  };
+
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={contextValue}>
       <div className="App">
         <Page>
           <h1>React ContextAPI Learning</h1>
-          {theme}
-          <Button title="Change Theme" handleClick={handleSetTheme} />
+          {contextValue.theme}
+          <Button title="Change Theme" />
         </Page>
       </div>
     </ThemeContext.Provider>

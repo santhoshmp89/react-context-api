@@ -6,9 +6,9 @@ const Button = props => {
     <ThemeContext.Consumer>
       {value => {
         return (
-          <button onClick={props.handleClick}>{`${
-            props.title
-          } ${value}`}</button>
+          <button onClick={value.themeChange}>{`${props.title} ${
+            value.theme
+          }`}</button>
         );
       }}
     </ThemeContext.Consumer>
